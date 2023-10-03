@@ -37,7 +37,7 @@ class _SplashViewState extends State<SplashView>
     // box.remove('Email_employee');
     bool isLogin = box.read("login_employee") ?? false;
     String isAdmin = box.read('email') ?? '';
-    if (isAdmin == 'mmmmmmmmmmm') {
+    if (isAdmin == 'admin_employee@gmail.com') {
       Get.off(() => const Admin());
     } else if (isLogin == true) {
       Get.off(() => ClientScreen());

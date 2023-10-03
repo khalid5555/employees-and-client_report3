@@ -41,10 +41,10 @@ class ClientSearchDelegate extends SearchDelegate {
   @override
   Widget buildResults(BuildContext context) {
     final String isAdmin = clientController.box.read('email') ?? '';
-    final searchAdmin = isAdmin == 'mmmmmmmmm'
+    final searchAdmin = isAdmin == 'admin_employee@gmail.com'
         ? clientController.clients
         : clientController.filteredCustomers;
-    //  'mmmmmmmmmmmm'
+    //  'admin_employee@gmail.com'
     final List<Client> searchResults = searchAdmin
         .where((client) =>
             client.name!.toLowerCase().contains(query.toLowerCase()) ||

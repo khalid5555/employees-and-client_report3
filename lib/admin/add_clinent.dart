@@ -125,7 +125,7 @@ class _AddClientState extends State<AddClient> {
                     : OutlinedButton(
                         onPressed: () async {
                           bool isAdmin =
-                              box.read('email') == 'mmmmmmmm.mmmmm';
+                              box.read('email') == 'admin_employee@gmail.com';
                          
                           final searchAdmin = isAdmin
                               ? Get.find<ClientController>().clients

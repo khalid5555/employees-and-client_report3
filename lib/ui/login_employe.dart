@@ -81,13 +81,13 @@ class _LoginFormState extends State<LoginEmployee> {
                               for (var i = 0; i < employee.length; i++) {
                                 if (email.text.trim() == employee[i].email &&
                                     email.text.trim() !=
-                                        'mmmmmmmmm') {
+                                        'admin_employee@gmail.com') {
                                   box.write("login_employee", true);
                                   box.write(
                                       "Email_employee", email.text.trim());
                                   Get.off(() => ClientScreen());
                                 } else if (email.text.trim() ==
-                                    'mmmmmmmmmm') {
+                                    'admin_employee@gmail.com') {
                                   box.write("email", email.text);
                                   Get.off(() => const Admin());
                                   box.write("Email_employee", email.text);
