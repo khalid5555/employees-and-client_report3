@@ -49,12 +49,6 @@ class _AdminState extends State<Admin> {
                 Get.to(() => AllClientScreenForAdmin());
               },
             ),
-            // TextButton(
-            //   child: const App_Text(data: 'اضافة عميل'),
-            //   onPressed: () {
-            //     Get.to(() => ClientScreen());
-            //   },
-            // ),
             OutlinedButton.icon(
               icon: const Icon(Icons.add_comment_outlined),
               label: const App_Text(data: 'اضافة موظف'),
