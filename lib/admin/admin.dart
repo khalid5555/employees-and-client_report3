@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../ui/manager_view.dart';
-// git clone https://github.com/khalid5555/employees-and-client_report.git
 
 class Admin extends StatefulWidget {
   const Admin({super.key});
