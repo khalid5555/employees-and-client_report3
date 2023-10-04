@@ -4,7 +4,7 @@
 
 A new Flutter project.
 
-<img src="[https://user-images.githubusercontent.com/link-to-your-image.png](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/3e4bb805-3bf7-4241-bd8f-d0dcf8a1c60a)" width="250" />
+<img src="[https://user-images.githubusercontent.com/link-to-your-image.png](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/3e4bb805-3bf7-4241-bd8f-d0dcf8a1c60a)" width=250 height =250 />
 
 
 ![](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/3e4bb805-3bf7-4241-bd8f-d0dcf8a1c60a)
