@@ -4,9 +4,10 @@
 
 A new Flutter project.
 
+<img src="[https://user-images.githubusercontent.com/link-to-your-image.png](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/3e4bb805-3bf7-4241-bd8f-d0dcf8a1c60a)" width="250" />
 
 
-![](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/3e4bb805-3bf7-4241-bd8f-d0dcf8a1c60a=250x250)
+![](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/3e4bb805-3bf7-4241-bd8f-d0dcf8a1c60a)
 ![t](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/c10365bf-c271-4edc-8c02-9609d7d3f007)
 ![](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/c2e1af93-b66b-4779-8077-276731de6f29)
 ![](https://github.com/khalid5555/employees-and-client_report3/assets/68198261/82f5c699-f2e7-4b56-be6e-0022b73837b9)
