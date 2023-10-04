@@ -1,9 +1,8 @@
 # employed_target app 
 
 
-
-
 # صور لشاشة التطبيق عند الادمن او المدير والموظفين وكل موظف مختص بالعملاء المسئول عنهم فقط والمدير يرئ كل العملاء عند كل الموظفين
+
 <img src="https://github.com/khalid5555/employees-and-client_report3/assets/68198261/3e4bb805-3bf7-4241-bd8f-d0dcf8a1c60a.jpg" width=250 height =350 />
 <img src="https://github.com/khalid5555/employees-and-client_report3/assets/68198261/c10365bf-c271-4edc-8c02-9609d7d3f007.jpg" width=250 height =350 />
 <img src="https://github.com/khalid5555/employees-and-client_report3/assets/68198261/c2e1af93-b66b-4779-8077-276731de6f29.jpg" width=250 height =350 />
