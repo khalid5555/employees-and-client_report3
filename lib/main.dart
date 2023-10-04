@@ -6,6 +6,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+// git add <file1> <file2> ...
+// git remote add origin https://github.com/khalid5555/employees-and-client_report3.git
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
