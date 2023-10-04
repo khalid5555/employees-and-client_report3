@@ -55,7 +55,11 @@ class EmployeeController extends GetxController {
 
 // import 'package:cloud_firestore/cloud_firestore.dart';
   Future<void> getEmployees() async {
-    return await _firestore.collection('employees').get().then((snapshot) {
+    return await _firestore
+        .collection('employees')
+        .orderBy('createdAt', descending: true)
+        .get()
+        .then((snapshot) {
       employees.assignAll(snapshot.docs.map((doc) {
         return Employee.fromMap(doc.data());
       }));
@@ -65,7 +69,9 @@ class EmployeeController extends GetxController {
   // Get all employees
   Future<List<Employee>> getAllEmployees() async {
     final employees2 = <Employee>[];
-    final employeeCollection = _firestore.collection('employees');
+    final employeeCollection = _firestore
+        .collection('employees')
+        .orderBy('createdAt', descending: true);
     final employeeQuerySnapshot = await employeeCollection.get();
     for (final employeeDocument in employeeQuerySnapshot.docs) {
       final employee = Employee.fromMap(employeeDocument.data());

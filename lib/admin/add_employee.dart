@@ -1,4 +1,5 @@
 // ignore_for_file: camel_case_types
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:employed_target/controllers/employee_controller.dart';
 import 'package:employed_target/model/employee_model.dart';
 import 'package:employed_target/shared/utils/app_colors.dart';
@@ -25,7 +26,7 @@ class _Add_employeeState extends State<Add_employee> {
     EmployeeController employeeController = Get.find<EmployeeController>();
     bool isLoading = false;
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 108, 110, 117),
+      backgroundColor: const Color.fromARGB(255, 134, 42, 143),
       body: Padding(
         padding: const EdgeInsets.only(right: 15, left: 15),
         child: Form(
@@ -60,8 +61,9 @@ class _Add_employeeState extends State<Add_employee> {
                 keytyp: TextInputType.number,
               ),
               const Spacer(flex: 1),
-              isLoading == false
-                  ? Container(
+              isLoading == true
+                  ? const ShowLoading()
+                  : Container(
                       decoration: const BoxDecoration(
                         color: AppColors.kWhite,
                         borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -69,7 +71,9 @@ class _Add_employeeState extends State<Add_employee> {
                       padding: const EdgeInsets.all(15),
                       child: InkWell(
                         onTap: () async {
-                          if (formKey.currentState!.validate()) {
+                          if (formKey.currentState!.validate() &&
+                              !employeeController.employees
+                                  .any((e) => e.email == email.text)) {
                             try {
                               setState(() {
                                 isLoading = true;
@@ -79,24 +83,24 @@ class _Add_employeeState extends State<Add_employee> {
                                   name: name.text,
                                   email: email.text,
                                   isManager: false,
+                                  createdAt: Timestamp.now(),
                                 ),
                               );
                               Get.snackbar('انتبه', 'تم اضافة موظف',
                                   colorText: AppColors.kWhite,
                                   backgroundColor: AppColors.signUpBg);
-                              Get.back(closeOverlays: true);
                               setState(() {
                                 isLoading = false;
                               });
                             } catch (e) {
                               Get.snackbar('error', e.toString());
-                              // EasyLoading.showError('  $e....');
                               setState(() {
                                 isLoading = false;
                               });
                             }
                           } else {
-                            Get.snackbar('انتبه', ' الرجاء ملئ الحقول',
+                            Get.snackbar('انتبه',
+                                ' الرجاء ملئ الحقول او ايميل الموظف متكرر',
                                 colorText: AppColors.kWhite,
                                 backgroundColor: AppColors.kbiColor);
                             setState(() {
@@ -108,8 +112,8 @@ class _Add_employeeState extends State<Add_employee> {
                           data: "تسجيل الدخول",
                           size: 14,
                         ),
-                      ))
-                  : const ShowLoading(),
+                      ),
+                    ),
               const Spacer(flex: 1),
             ],
           ),

@@ -1,13 +1,14 @@
 // manager_view.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:employed_target/admin/add_clinent.dart';
+import 'package:employed_target/admin/add_employee.dart';
 import 'package:employed_target/controllers/employee_controller.dart';
 import 'package:employed_target/model/employee_model.dart';
+import 'package:employed_target/shared/utils/app_colors.dart';
 import 'package:employed_target/shared/utils/constants.dart';
 import 'package:employed_target/shared/widgets/app_text.dart';
 import 'package:employed_target/shared/widgets/app_text_field.dart';
 import 'package:employed_target/ui/ProductSearchDelegate%20.dart';
-import 'package:employed_target/admin/add_employee.dart';
 import 'package:employed_target/ui/client_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,57 +21,78 @@ class EmployeeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: recolor().withOpacity(.3),
-        title: const Text("بيانات الموظفين"),
+        backgroundColor: AppColors.kPrColor,
+        title: const App_Text(
+          data: "بيانات الموظفين",
+          color: AppColors.kPr2Color,
+        ),
       ),
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Add Employee"),
         onPressed: () {
           // Show dialog to add an employee
-          showDialog(
-            context: context,
-            builder: (_) => const Add_employee(),
-          );
+          Get.to(() => const Add_employee());
         },
       ),
       body: Container(
-        color: recolor().withOpacity(.1),
+        color: const Color.fromARGB(169, 204, 230, 241),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Obx(() {
               employeeController.getAllEmployees();
+              employeeController.getEmployees();
               return Expanded(
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
                   itemCount: employeeController.employees.length,
                   itemBuilder: (context, index) {
                     final employee = employeeController.employees[index];
-                    return ListTile(
-                      title: Text(employee.name!),
-                      subtitle: Text(employee.email!),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          IconButton(
-                            icon: const Icon(Icons.edit),
-                            onPressed: () {
-                              // Show dialog to edit an employee
-                              showDialog(
-                                context: context,
-                                builder: (_) =>
-                                    EditEmployeeDialog(employee: employee),
-                              );
-                            },
+                    return Column(
+                      children: [
+                        ListTile(
+                          title: App_Text(
+                            direction: TextDirection.ltr,
+                            data: employee.name!,
+                            size: 12,
                           ),
-                          IconButton(
-                            icon: const Icon(Icons.delete),
-                            onPressed: () {
-                              // Delete the employee
-                              employeeController.deleteEmployee(employee.id!);
-                            },
+                          subtitle: App_Text(
+                            data: employee.email!,
+                            direction: TextDirection.ltr,
+                            size: 14,
+                            maxLine: 3,
                           ),
-                        ],
-                      ),
+                          trailing: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                color: Colors.blue,
+                                icon: const Icon(Icons.edit),
+                                onPressed: () {
+                                  // Show dialog to edit an employee
+                                  showDialog(
+                                    context: context,
+                                    builder: (_) =>
+                                        EditEmployeeDialog(employee: employee),
+                                  );
+                                },
+                              ),
+                              IconButton(
+                                color: Colors.red,
+                                icon: const Icon(Icons.delete),
+                                onPressed: () {
+                                  // Delete the employee
+                                  employeeController
+                                      .deleteEmployee(employee.id!);
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Divider(
+                          thickness: 4,
+                        )
+                      ],
                     );
                   },
                 ),

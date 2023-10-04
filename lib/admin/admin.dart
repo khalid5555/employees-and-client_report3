@@ -20,8 +20,11 @@ class _AdminState extends State<Admin> {
       backgroundColor: const Color.fromARGB(255, 166, 204, 171),
       appBar: AppBar(
         actions: [
-          TextButton(
-            child: const App_Text(data: 'exit'),
+          OutlinedButton(
+            child: const App_Text(
+              data: 'خروج',
+              color: AppColors.kPrColor,
+            ),
             onPressed: () {
               Get.find<EmployeeController>().box.remove('login_employee');
               Get.find<EmployeeController>().box.remove('email');

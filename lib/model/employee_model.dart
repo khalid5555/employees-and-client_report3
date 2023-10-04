@@ -6,11 +6,13 @@ class Employee {
   final String? name;
   final String? email;
   final bool? isManager;
+  final Timestamp? createdAt;
   Employee({
     this.id,
     this.name,
     this.email,
     this.isManager,
+    this.createdAt,
   });
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
@@ -18,6 +20,7 @@ class Employee {
     result.addAll({'name': name});
     result.addAll({'email': email});
     result.addAll({'isManager': isManager});
+    result.addAll({'createdAt': createdAt});
     return result;
   }
 
@@ -27,6 +30,7 @@ class Employee {
       name: map['name'] ?? '',
       email: map['email'] ?? '',
       isManager: map['isManager'] ?? false,
+      createdAt: map['createdAt'] ?? '',
     );
   }
 }
