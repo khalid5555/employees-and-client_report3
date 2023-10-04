@@ -18,8 +18,8 @@ class _SplashViewState extends State<SplashView>
   @override
   void initState() {
     super.initState();
-    controller = AnimationController(
-        duration: Duration(milliseconds: 600), vsync: this);
+    controller =
+        AnimationController(duration: Duration(milliseconds: 600), vsync: this);
     opacity = Tween<double>(begin: 1.0, end: 1.0).animate(controller)
       ..addListener(() {
         setState(() {});
@@ -37,7 +37,7 @@ class _SplashViewState extends State<SplashView>
     // box.remove('Email_employee');
     bool isLogin = box.read("login_employee") ?? false;
     String isAdmin = box.read('email') ?? '';
-    if (isAdmin == 'admin_employee@gmail.com') {
+    if (isAdmin == 'mmmmmmmmmm') {
       Get.off(() => const Admin());
     } else if (isLogin == true) {
       Get.off(() => ClientScreen());
