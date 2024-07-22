@@ -9,11 +9,7 @@
 <img src="https://github.com/khalid5555/employees-and-client_report3/assets/68198261/82f5c699-f2e7-4b56-be6e-0022b73837b9.jpg" width=250 height =350 />
 <img src="https://github.com/khalid5555/employees-and-client_report3/assets/68198261/46df3b47-66dc-4e66-8ed0-3482ef1a8457.jpg" width=250 height =350 />
 
-![Screenshot_5](https://github.com/user-attachments/assets/c2d25eb9-37ac-47d9-8571-6fddccea3383)
-![Screenshot_1](https://github.com/user-attachments/assets/be5dfd8c-b530-4426-9d45-c46dd63abf11)
-![Screenshot-2](https://github.com/user-attachments/assets/a88b688a-c370-4a92-a49f-6283b7c39815)
-![Screenshot_3](https://github.com/user-attachments/assets/4d8d9de5-303f-47f5-9076-76f6d6294a89)
-![Screenshot_4](https://github.com/user-attachments/assets/8858abcf-c92f-44b5-b594-620999944f7d)
+
 
 
 
