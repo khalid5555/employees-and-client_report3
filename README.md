@@ -4,7 +4,7 @@
 # صور لشاشة التطبيق عند الادمن او المدير والموظفين وكل موظف مختص بالعملاء المسئول عنهم فقط والمدير يرئ كل العملاء عند كل الموظفين
 
 <img src="https://github.com/khalid5555/employees-and-client_report3/assets/68198261/3e4bb805-3bf7-4241-bd8f-d0dcf8a1c60a.jpg" width=250 height =350 />
-<img src="https://github.com/khalid5555/employees-and-client_report3/assets/1109c85c-cf63-481f-92e9-d3764698ccd5.jpg" width=250 height =350 />
+<img src="https://github.com/khalid5555/employees-and-client_report3/assets/68198261/1109c85c-cf63-481f-92e9-d3764698ccd5.jpg" width=250 height =350 />
 
 
 
